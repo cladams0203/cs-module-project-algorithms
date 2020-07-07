@@ -4,8 +4,11 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
-
-    pass
+    arr.sort()
+    for idx, num in enumerate(arr):
+        if num != arr[idx + 1]:
+            if arr[idx + 1] != arr[idx + 2]:
+                return arr[idx + 1]
 
 
 if __name__ == '__main__':
